@@ -1,0 +1,20 @@
+# Read about how to use this configuration file
+# https://developers.cloudflare.com/workers/cli-wrangler/configuration
+
+name = "fossabot-custom-functions"
+type = "javascript"
+account_id = ""
+workers_dev = true
+
+[vars]
+EXAMPLE_ENVIRONMENT_VARIABLE = "Hello, World!"
+
+[[kv_namespaces]]
+binding = "FOSSABOT"
+preview_id = ""
+id = ""
+
+[build]
+command = "npm run webpack"
+[build.upload]
+format = "service-worker"

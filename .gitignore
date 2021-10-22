@@ -1,0 +1,11 @@
+# Read about how to use .gitignore
+# https://help.github.com/articles/ignoring-files
+
+# node.js dependencies
+node_modules
+
+# worker's configuration file
+wrangler.toml
+
+# build output
+dist
