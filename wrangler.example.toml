@@ -5,6 +5,7 @@ name = "fossabot-custom-functions"
 type = "javascript"
 account_id = ""
 workers_dev = true
+compatibility_date = "2021-10-22"
 
 [vars]
 EXAMPLE_ENVIRONMENT_VARIABLE = "Hello, World!"
