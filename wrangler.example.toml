@@ -1,17 +1,16 @@
 # Read about how to use this configuration file
 # https://developers.cloudflare.com/workers/cli-wrangler/configuration
 
-name = "fossabot-custom-functions"
+name = "worker-typescript-template"
 type = "javascript"
 account_id = ""
 workers_dev = true
-compatibility_date = "2021-10-22"
 
 [vars]
 EXAMPLE_ENVIRONMENT_VARIABLE = "Hello, World!"
 
 [[kv_namespaces]]
-binding = "FOSSABOT"
+binding = ""
 preview_id = ""
 id = ""
 
