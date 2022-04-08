@@ -1,1 +1,1 @@
-# `worker-typescript-template 🦕`
+# `worker-typescript-template 🍁🍂🥧`
