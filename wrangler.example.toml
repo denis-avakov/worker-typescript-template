@@ -5,6 +5,7 @@ name = "worker-typescript-template"
 type = "javascript"
 account_id = ""
 workers_dev = true
+compatibility_date = "2022-04-08"
 
 [vars]
 EXAMPLE_ENVIRONMENT_VARIABLE = "Hello, World!"
