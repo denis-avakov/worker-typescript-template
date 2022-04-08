@@ -1,1 +1,1 @@
-# Boilerplate for Cloudflare Workers 🦕
+# `worker-typescript-template 🦕`
