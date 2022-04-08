@@ -2,7 +2,9 @@
   "private": true,
   "main": "./dist/worker.js",
   "scripts": {
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "dev": "wrangler dev",
+    "publish": "wrangler publish"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.4.0",
