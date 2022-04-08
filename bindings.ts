@@ -2,5 +2,5 @@ export {};
 
 declare global {
   const EXAMPLE_ENVIRONMENT_VARIABLE: string;
-  const FOSSABOT: KVNamespace;
+  const EXAMPLE_KV_NAMESPACE: KVNamespace;
 }
