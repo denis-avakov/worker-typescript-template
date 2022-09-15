@@ -6,9 +6,9 @@
     "build": "node build.js",
     "dev": "miniflare --live-reload --debug --modules ./dist/index.mjs",
     "dev:remote": "wrangler dev",
-    "deploy": "wrangler publish",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "deploy": "wrangler publish"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
