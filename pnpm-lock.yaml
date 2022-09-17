@@ -8,12 +8,16 @@ specifiers:
   esbuild: ^0.15.7
   eslint: ^8.23.1
   eslint-config-prettier: ^8.5.0
+  hono: ^2.1.4
   miniflare: ^2.9.0
   prettier: ^2.7.1
   typescript: ^4.8.3
   vitest: ^0.23.2
   vitest-environment-miniflare: ^2.9.0
   wrangler: ^2.1.4
+
+dependencies:
+  hono: 2.1.4
 
 devDependencies:
   '@cloudflare/workers-types': 3.16.0
@@ -1526,6 +1530,11 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /hono/2.1.4:
+    resolution: {integrity: sha512-x4mNdB7YoMBMHe8rDyXgKcAjK4/lerUY4PBaEYu+XCz1AilxtZAKLDtUer4ptaZ4T6RYreo5ksZuA3bQdOUEug==}
+    engines: {node: '>=11.0.0'}
+    dev: false
 
   /html-escaper/2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
