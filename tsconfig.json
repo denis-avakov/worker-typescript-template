@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "module": "esnext",
     "moduleResolution": "node",
+    "paths": {
+      "~/*": ["./*"]
+    },
     "types": ["@cloudflare/workers-types"],
     "noEmit": true,
     "esModuleInterop": true,
     "lib": ["esnext"],
     "target": "esnext"
   },
-  "include": ["src/**/*", "bindings.d.ts"]
+  "include": ["src/**/*", "test/*", "bindings.d.ts"]
 }

@@ -8,21 +8,42 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-export default {
-  async fetch(request?: Request, env?: Bindings) {
-    if (env) {
-      console.log('_', await env.EXAMPLE_ENVIRONMENT_VARIABLE);
-      console.log('_', await env.EXAMPLE_KV_NAMESPACE.get('key'));
-    }
+import { Hono } from 'hono';
+import { logger } from 'hono/logger';
+import { prettyJSON } from 'hono/pretty-json';
+import { createError, createLog } from '~/utils';
 
-    return new Response('Hello Miniflare!');
-  },
-  async scheduled(controller?: ScheduledController, env?: Bindings) {
-    if (env) {
-      console.log('_', await env.EXAMPLE_ENVIRONMENT_VARIABLE);
-      console.log('_', await env.EXAMPLE_KV_NAMESPACE.get('key'));
-    }
+const app = new Hono<{ Bindings: Bindings }>();
 
-    console.log('Doing something scheduled...');
+app.use('*', logger());
+app.use('*', prettyJSON());
+
+app.get('/', async (context) => {
+  console.log('_', context.env.EXAMPLE_ENVIRONMENT_VARIABLE);
+  console.log('_', await context.env.EXAMPLE_KV_NAMESPACE.get('key'));
+
+  return context.text('Hono!!');
+});
+
+app.notFound((context) => {
+  return createError(context, 404);
+});
+
+app.onError((error, context) => {
+  createLog(context, error.message);
+  return createError(context, 500);
+});
+
+async function scheduled(controller?: ScheduledController, env?: Bindings) {
+  if (env) {
+    console.log('_', await env.EXAMPLE_ENVIRONMENT_VARIABLE);
+    console.log('_', await env.EXAMPLE_KV_NAMESPACE.get('key'));
   }
+
+  console.log('Doing something scheduled...');
+}
+
+export default {
+  fetch: app.fetch,
+  scheduled
 };

@@ -24,5 +24,8 @@
     "vitest": "^0.23.2",
     "vitest-environment-miniflare": "^2.9.0",
     "wrangler": "^2.1.4"
+  },
+  "dependencies": {
+    "hono": "^2.1.4"
   }
 }
