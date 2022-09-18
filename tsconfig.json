@@ -13,5 +13,5 @@
     "lib": ["esnext"],
     "target": "esnext"
   },
-  "include": ["src/**/*", "test/*", "bindings.d.ts"]
+  "include": ["src/**/*", "test/**/*", "bindings.d.ts"]
 }

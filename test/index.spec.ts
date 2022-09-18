@@ -1,13 +1,15 @@
-import { describe, expect, test } from 'vitest';
+import { expect, test, describe } from 'vitest';
 import API from '../src';
 
 declare global {
   function getMiniflareBindings(): Bindings;
 }
 
-describe.concurrent('worker GET requests', () => {
+const env = getMiniflareBindings();
+
+describe.concurrent('worker fetch events', () => {
   function fetchWorker(target: string) {
-    return API.fetch(new Request(target), getMiniflareBindings());
+    return API.fetch(new Request(target), env);
   }
 
   test('GET / is ok', async () => {
