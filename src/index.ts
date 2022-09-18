@@ -11,7 +11,7 @@
 import { Hono } from 'hono';
 import { logger } from 'hono/logger';
 import { prettyJSON } from 'hono/pretty-json';
-import { createError, createLog } from '~/utils';
+import { createError } from '~/utils';
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -30,7 +30,6 @@ app.notFound((context) => {
 });
 
 app.onError((error, context) => {
-  createLog(context, error.message);
   return createError(context, 500);
 });
 
