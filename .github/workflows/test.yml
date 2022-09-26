@@ -1,4 +1,4 @@
-name: Test
+name: Tests CI
 
 on:
   push:
@@ -45,4 +45,17 @@ jobs:
         run: pnpm install
 
       - name: Run tests
-        run: pnpm run test
+        run: pnpm run coverage
+
+      - name: Report test coverage to DeepSource
+        uses: deepsourcelabs/test-coverage-action@master
+        with:
+          key: javascript
+          coverage-file: coverage/cobertura-coverage.xml
+          dsn: ${{ secrets.DEEPSOURCE_DSN }}
+          fail-ci-on-error: true
+
+      - name: Report test coverage to Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
