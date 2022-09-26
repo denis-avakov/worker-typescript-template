@@ -1,20 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@cloudflare/workers-types': ^3.16.0
-  '@typescript-eslint/eslint-plugin': ^5.38.0
-  '@typescript-eslint/parser': ^5.38.0
-  '@vitest/coverage-c8': ^0.23.4
-  esbuild: ^0.15.9
-  eslint: ^8.24.0
-  eslint-config-prettier: ^8.5.0
-  hono: ^2.2.1
-  miniflare: ^2.9.0
-  prettier: ^2.7.1
-  typescript: ^4.8.3
-  vitest: ^0.23.4
-  vitest-environment-miniflare: ^2.9.0
-  wrangler: ^2.1.6
+  '@cloudflare/workers-types': 3.16.0
+  '@typescript-eslint/eslint-plugin': 5.38.0
+  '@typescript-eslint/parser': 5.38.0
+  '@vitest/coverage-c8': 0.23.4
+  esbuild: 0.15.9
+  eslint: 8.24.0
+  eslint-config-prettier: 8.5.0
+  hono: 2.2.1
+  miniflare: 2.9.0
+  prettier: 2.7.1
+  typescript: 4.8.3
+  vitest: 0.23.4
+  vitest-environment-miniflare: 2.9.0
+  wrangler: 2.1.6
 
 dependencies:
   hono: 2.2.1
@@ -724,7 +724,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /convert-source-map/1.8.0:
