@@ -19,8 +19,10 @@ app.use('*', logger());
 app.use('*', prettyJSON());
 
 app.get('/', async (context) => {
+  const EXAMPLE_KV_NAMESPACE = await context.env.EXAMPLE_KV_NAMESPACE.get('key');
+
   console.log('_', context.env.EXAMPLE_ENVIRONMENT_VARIABLE);
-  console.log('_', await context.env.EXAMPLE_KV_NAMESPACE.get('key'));
+  console.log('_', EXAMPLE_KV_NAMESPACE);
 
   return context.text('Hono!!');
 });
@@ -35,8 +37,10 @@ app.onError((error, context) => {
 
 async function scheduled(controller?: ScheduledController, env?: Bindings) {
   if (env) {
-    console.log('_', await env.EXAMPLE_ENVIRONMENT_VARIABLE);
-    console.log('_', await env.EXAMPLE_KV_NAMESPACE.get('key'));
+    const EXAMPLE_KV_NAMESPACE = await env.EXAMPLE_KV_NAMESPACE.get('key');
+
+    console.log('_', env.EXAMPLE_ENVIRONMENT_VARIABLE);
+    console.log('_', EXAMPLE_KV_NAMESPACE);
   }
 
   console.log('Doing something scheduled...');
