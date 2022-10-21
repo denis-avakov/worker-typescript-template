@@ -10,6 +10,9 @@
     "coverage": "vitest run --coverage",
     "deploy": "wrangler publish"
   },
+  "dependencies": {
+    "hono": "^2.2.1"
+  },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
@@ -24,8 +27,5 @@
     "vitest": "^0.23.4",
     "vitest-environment-miniflare": "^2.9.0",
     "wrangler": "^2.1.6"
-  },
-  "dependencies": {
-    "hono": "^2.2.1"
   }
 }
