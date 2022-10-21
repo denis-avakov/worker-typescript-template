@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Type Checking
+        run: pnpm run typecheck
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Test
+        run: pnpm run coverage
+
+      # Disabled until DeepSource fixes the SSL certificate
+      # - name: Report test coverage to DeepSource
+      #   uses: deepsourcelabs/test-coverage-action@master
+      #   with:
+      #     key: javascript
+      #     coverage-file: coverage/cobertura-coverage.xml
+      #     dsn: ${{ secrets.DEEPSOURCE_DSN }}
+      #     fail-ci-on-error: true
+
+      - name: Report test coverage to Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

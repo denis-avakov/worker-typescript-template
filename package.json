@@ -8,6 +8,8 @@
     "dev:remote": "wrangler dev",
     "test": "vitest",
     "coverage": "vitest run --coverage",
+    "lint": "eslint --cache .",
+    "typecheck": "tsc --noEmit",
     "deploy": "wrangler publish"
   },
   "dependencies": {
