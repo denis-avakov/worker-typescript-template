@@ -44,14 +44,13 @@ jobs:
       - name: Test
         run: pnpm run coverage
 
-      # Disabled until DeepSource fixes the SSL certificate
-      # - name: Report test coverage to DeepSource
-      #   uses: deepsourcelabs/test-coverage-action@master
-      #   with:
-      #     key: javascript
-      #     coverage-file: coverage/cobertura-coverage.xml
-      #     dsn: ${{ secrets.DEEPSOURCE_DSN }}
-      #     fail-ci-on-error: true
+      - name: Report test coverage to DeepSource
+        uses: deepsourcelabs/test-coverage-action@master
+        with:
+          key: javascript
+          coverage-file: coverage/cobertura-coverage.xml
+          dsn: ${{ secrets.DEEPSOURCE_DSN }}
+          fail-ci-on-error: true
 
       - name: Report test coverage to Coveralls
         uses: coverallsapp/github-action@master
