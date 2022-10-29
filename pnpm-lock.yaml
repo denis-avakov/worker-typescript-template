@@ -9,7 +9,7 @@ specifiers:
   eslint: 8.26.0
   eslint-config-prettier: 8.5.0
   hono: 2.3.1
-  miniflare: 2.10.0
+  miniflare: 2.11.0
   prettier: 2.7.1
   typescript: 4.8.4
   vitest: 0.24.3
@@ -27,7 +27,7 @@ devDependencies:
   esbuild: 0.15.12
   eslint: 8.26.0
   eslint-config-prettier: 8.5.0_eslint@8.26.0
-  miniflare: 2.10.0
+  miniflare: 2.11.0
   prettier: 2.7.1
   typescript: 4.8.4
   vitest: 0.24.3
@@ -176,6 +176,14 @@ packages:
       kleur: 4.1.5
     dev: true
 
+  /@miniflare/cli-parser/2.11.0:
+    resolution: {integrity: sha512-JUmyRzEGAS6CouvXJwBh8p44onfw3KRpfq5JGXEuHModOGjTp6li7PQyCTNPV2Hv/7StAXWnTFGXeAqyDHuTig==}
+    engines: {node: '>=16.13'}
+    dependencies:
+      '@miniflare/shared': 2.11.0
+      kleur: 4.1.5
+    dev: true
+
   /@miniflare/core/2.10.0:
     resolution: {integrity: sha512-Jx1M5oXQua0jzsJVdZSq07baVRmGC/6JkglrPQGAlZ7gQ1sunVZzq9fjxFqj0bqfEuYS0Wy6+lvK4rOAHISIjw==}
     engines: {node: '>=16.13'}
@@ -281,6 +289,23 @@ packages:
       - utf-8-validate
     dev: true
 
+  /@miniflare/http-server/2.11.0:
+    resolution: {integrity: sha512-sMLcrDFzqqAvnQmAUH0hRTo8sBjW79VZYfnIH5FAGSGcKX6kdAGs9RStdYZ4CftQCBAEQScX0KBsMx5FwJRe9Q==}
+    engines: {node: '>=16.13'}
+    dependencies:
+      '@miniflare/core': 2.11.0
+      '@miniflare/shared': 2.11.0
+      '@miniflare/web-sockets': 2.11.0
+      kleur: 4.1.5
+      selfsigned: 2.1.1
+      undici: 5.9.1
+      ws: 8.8.1
+      youch: 2.2.2
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: true
+
   /@miniflare/kv/2.10.0:
     resolution: {integrity: sha512-3+u1lO77FnlS0lQ6b1VgM1E/ZgQ/zy/FU+SdBG5LUOIiv3x522VYHOApeJLnSEo0KtZUB22Ni0fWQM6DgpaREg==}
     engines: {node: '>=16.13'}
@@ -345,6 +370,15 @@ packages:
     dependencies:
       '@miniflare/core': 2.10.0
       '@miniflare/shared': 2.10.0
+      cron-schedule: 3.0.6
+    dev: true
+
+  /@miniflare/scheduler/2.11.0:
+    resolution: {integrity: sha512-DPdzINhdWeS99eIicGoluMsD4pLTTAWNQbgCv3CTwgdKA3dxdvMSCkNqZzQLiALzvk9+rSfj46FlH++HE7o7/w==}
+    engines: {node: '>=16.13'}
+    dependencies:
+      '@miniflare/core': 2.11.0
+      '@miniflare/shared': 2.11.0
       cron-schedule: 3.0.6
     dev: true
 
@@ -1933,6 +1967,48 @@ packages:
       '@miniflare/storage-file': 2.10.0
       '@miniflare/storage-memory': 2.10.0
       '@miniflare/web-sockets': 2.10.0
+      kleur: 4.1.5
+      semiver: 1.1.0
+      source-map-support: 0.5.21
+      undici: 5.9.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: true
+
+  /miniflare/2.11.0:
+    resolution: {integrity: sha512-QA18I1VQXdCo4nBtPJUcUDxW8c9xbc5ex5F61jwhkGVOISSnYdEheolESmjr8MYk28xwi0XD1ozS4rLaTONd+w==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    peerDependencies:
+      '@miniflare/storage-redis': 2.11.0
+      cron-schedule: ^3.0.4
+      ioredis: ^4.27.9
+    peerDependenciesMeta:
+      '@miniflare/storage-redis':
+        optional: true
+      cron-schedule:
+        optional: true
+      ioredis:
+        optional: true
+    dependencies:
+      '@miniflare/cache': 2.11.0
+      '@miniflare/cli-parser': 2.11.0
+      '@miniflare/core': 2.11.0
+      '@miniflare/d1': 2.11.0
+      '@miniflare/durable-objects': 2.11.0
+      '@miniflare/html-rewriter': 2.11.0
+      '@miniflare/http-server': 2.11.0
+      '@miniflare/kv': 2.11.0
+      '@miniflare/queues': 2.11.0
+      '@miniflare/r2': 2.11.0
+      '@miniflare/runner-vm': 2.11.0
+      '@miniflare/scheduler': 2.11.0
+      '@miniflare/shared': 2.11.0
+      '@miniflare/sites': 2.11.0
+      '@miniflare/storage-file': 2.11.0
+      '@miniflare/storage-memory': 2.11.0
+      '@miniflare/web-sockets': 2.11.0
       kleur: 4.1.5
       semiver: 1.1.0
       source-map-support: 0.5.21
