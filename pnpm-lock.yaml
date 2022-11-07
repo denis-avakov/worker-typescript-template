@@ -8,7 +8,7 @@ specifiers:
   esbuild: 0.15.13
   eslint: 8.27.0
   eslint-config-prettier: 8.5.0
-  hono: 2.4.1
+  hono: 2.5.0
   miniflare: 2.11.0
   prettier: 2.7.1
   typescript: 4.8.4
@@ -17,7 +17,7 @@ specifiers:
   wrangler: 2.1.15
 
 dependencies:
-  hono: 2.4.1
+  hono: 2.5.0
 
 devDependencies:
   '@cloudflare/workers-types': 3.18.0
@@ -1711,8 +1711,8 @@ packages:
       function-bind: 1.1.1
     dev: true
 
-  /hono/2.4.1:
-    resolution: {integrity: sha512-cxnfkoMJSyt7Kg17HdbL4/k63Mo80v8DvIXY4qHrQX9ceFiEo73oTH/Ikr8Ii7ym/ur78x9O5/4zQ6as9TRz9A==}
+  /hono/2.5.0:
+    resolution: {integrity: sha512-t3ZrlzJ6lqKJE81vspmHBlUQfP4iqTq/o0eHMu8gM59AOUIa8R+so2g/abXhMPAd2AKMbjWN1liYDGCaqG37eg==}
     engines: {node: '>=16.0.0'}
     dev: false
 
