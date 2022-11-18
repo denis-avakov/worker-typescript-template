@@ -14,7 +14,7 @@ specifiers:
   typescript: 4.9.3
   vitest: 0.25.2
   vitest-environment-miniflare: 2.11.0
-  wrangler: 2.4.0
+  wrangler: 2.4.2
 
 dependencies:
   hono: 2.5.2
@@ -32,7 +32,7 @@ devDependencies:
   typescript: 4.9.3
   vitest: 0.25.2
   vitest-environment-miniflare: 2.11.0_vitest@0.25.2
-  wrangler: 2.4.0
+  wrangler: 2.4.2
 
 packages:
 
@@ -2617,8 +2617,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /wrangler/2.4.0:
-    resolution: {integrity: sha512-iIz1dDLWuIIv79YnvdhY97FMie/cOBfX6WblMFzus/sdgBcnkhf7t0szxn7SYQWaeb+4Bszs+ReI4JZOnkxkqg==}
+  /wrangler/2.4.2:
+    resolution: {integrity: sha512-fgcP+y4aEXozeP0hGKohfodxBm1ah/qwclw499TvoBogLKEhkPHH2w+MHh2PBFek467I4iaOLpSh4Sho+J6GuQ==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     dependencies:
