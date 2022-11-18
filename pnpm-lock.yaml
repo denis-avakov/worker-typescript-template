@@ -4,7 +4,7 @@ specifiers:
   '@cloudflare/workers-types': 3.18.0
   '@typescript-eslint/eslint-plugin': 5.42.1
   '@typescript-eslint/parser': 5.42.1
-  '@vitest/coverage-c8': 0.25.1
+  '@vitest/coverage-c8': 0.25.2
   esbuild: 0.15.13
   eslint: 8.27.0
   eslint-config-prettier: 8.5.0
@@ -12,7 +12,7 @@ specifiers:
   miniflare: 2.11.0
   prettier: 2.7.1
   typescript: 4.8.4
-  vitest: 0.25.1
+  vitest: 0.25.2
   vitest-environment-miniflare: 2.11.0
   wrangler: 2.4.0
 
@@ -23,15 +23,15 @@ devDependencies:
   '@cloudflare/workers-types': 3.18.0
   '@typescript-eslint/eslint-plugin': 5.42.1_2udltptbznfmezdozpdoa2aemq
   '@typescript-eslint/parser': 5.42.1_rmayb2veg2btbq6mbmnyivgasy
-  '@vitest/coverage-c8': 0.25.1
+  '@vitest/coverage-c8': 0.25.2
   esbuild: 0.15.13
   eslint: 8.27.0
   eslint-config-prettier: 8.5.0_eslint@8.27.0
   miniflare: 2.11.0
   prettier: 2.7.1
   typescript: 4.8.4
-  vitest: 0.25.1
-  vitest-environment-miniflare: 2.11.0_vitest@0.25.1
+  vitest: 0.25.2
+  vitest-environment-miniflare: 2.11.0_vitest@0.25.2
   wrangler: 2.4.0
 
 packages:
@@ -697,11 +697,11 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitest/coverage-c8/0.25.1:
-    resolution: {integrity: sha512-gpl5QNaNeIN0mfRiosCqBFoZcizb5GA458TDnOQXkGDc4kklazxn70u9evGfV62wiiAUfGGebgRhxlBkAa6m6g==}
+  /@vitest/coverage-c8/0.25.2:
+    resolution: {integrity: sha512-qKsiUJh3bjbB5Q229CbxEWCqiDBwvIrcZ9OOuQdMEC0pce3/LlTUK3+K3hd7WqAYEbbiqXfC5MVMKHZkV82PgA==}
     dependencies:
       c8: 7.12.0
-      vitest: 0.25.1
+      vitest: 0.25.2
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -2544,7 +2544,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest-environment-miniflare/2.11.0_vitest@0.25.1:
+  /vitest-environment-miniflare/2.11.0_vitest@0.25.2:
     resolution: {integrity: sha512-SQESvpPVtY60WF70AJy4OCDbDvbrFE6xDsgss+Na5oCJK6SRMMkURKkoRLUbaCE66FsSlf8GivGV6IK6Fa5Cnw==}
     engines: {node: '>=16.13'}
     peerDependencies:
@@ -2554,14 +2554,14 @@ packages:
       '@miniflare/runner-vm': 2.11.0
       '@miniflare/shared': 2.11.0
       '@miniflare/shared-test-environment': 2.11.0
-      vitest: 0.25.1
+      vitest: 0.25.2
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     dev: true
 
-  /vitest/0.25.1:
-    resolution: {integrity: sha512-eH74h6MkuEgsqR4mAQZeMK9O0PROiKY+i+1GMz/fBi5A3L2ml5U7JQs7LfPU7+uWUziZyLHagl+rkyfR8SLhlA==}
+  /vitest/0.25.2:
+    resolution: {integrity: sha512-qqkzfzglEFbQY7IGkgSJkdOhoqHjwAao/OrphnHboeYHC5JzsVFoLCaB2lnAy8krhj7sbrFTVRApzpkTOeuDWQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
