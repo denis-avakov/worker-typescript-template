@@ -1,9 +1,10 @@
 version = 1
 
 [[analyzers]]
-name = "secrets"
-enabled = true
+name = "javascript"
 
 [[analyzers]]
-name = "javascript"
-enabled = true
+name = "test-coverage"
+
+[[analyzers]]
+name = "secrets"
