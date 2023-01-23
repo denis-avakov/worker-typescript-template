@@ -7,7 +7,7 @@ specifiers:
   '@vitest/coverage-c8': 0.25.2
   esbuild: 0.15.14
   eslint: 8.27.0
-  eslint-config-prettier: 8.5.0
+  eslint-config-prettier: 8.6.0
   hono: 2.5.2
   miniflare: 2.11.0
   prettier: 2.7.1
@@ -26,7 +26,7 @@ devDependencies:
   '@vitest/coverage-c8': 0.25.2
   esbuild: 0.15.14
   eslint: 8.27.0
-  eslint-config-prettier: 8.5.0_eslint@8.27.0
+  eslint-config-prettier: 8.6.0_eslint@8.27.0
   miniflare: 2.11.0
   prettier: 2.7.1
   typescript: 4.8.4
@@ -1405,8 +1405,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.5.0_eslint@8.27.0:
-    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+  /eslint-config-prettier/8.6.0_eslint@8.27.0:
+    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
