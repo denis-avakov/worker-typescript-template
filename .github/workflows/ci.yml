@@ -54,7 +54,7 @@ jobs:
           dsn: ${{ secrets.DEEPSOURCE_DSN }}
           fail-ci-on-error: true
 
-      - name: Report test coverage to Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Report test coverage to Code Climate
+        uses: paambaati/codeclimate-action@v3.2.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
