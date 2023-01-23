@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   pull_request:
     types: [opened, synchronize]
 
@@ -16,7 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          fetch-depth: 50
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Install pnpm package manager
         uses: pnpm/action-setup@v2.2.4
@@ -26,7 +27,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -44,15 +45,7 @@ jobs:
       - name: Test
         run: pnpm run coverage
 
-      - name: Report test coverage to DeepSource
-        uses: deepsourcelabs/test-coverage-action@master
-        with:
-          key: javascript
-          coverage-file: coverage/cobertura-coverage.xml
-          dsn: ${{ secrets.DEEPSOURCE_DSN }}
-          fail-ci-on-error: true
-
-      - name: Report test coverage to Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Report test coverage to Code Climate
+        uses: paambaati/codeclimate-action@v3.2.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
