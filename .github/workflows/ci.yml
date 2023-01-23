@@ -6,6 +6,9 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+env:
+  DEEPSOURCE_DSN: secrets.DEEPSOURCE_DSN
+
 jobs:
   build-and-test:
     name: Build and Test
