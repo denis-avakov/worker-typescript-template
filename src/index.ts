@@ -3,6 +3,7 @@
  *
  * Welcome to Cloudflare Workers!
  *
+ * - Rename the `wrangler.example.toml` to `wrangler.toml` and populate the variables
  * - Run `pnpm run dev` in your terminal to start a development server
  * - Open a browser at http://127.0.0.1:8787/ to see your worker in action
  * - Make HTTP requests to `/cdn-cgi/mf/scheduled` to trigger scheduled events
