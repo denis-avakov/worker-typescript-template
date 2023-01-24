@@ -1,22 +1,33 @@
 {
   "private": true,
-  "main": "./dist/worker.js",
+  "type": "module",
+  "module": "./dist/index.mjs",
   "scripts": {
-    "webpack": "webpack",
-    "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "build": "node build.js",
+    "dev": "miniflare --live-reload --debug --modules ./dist/index.mjs",
+    "dev:remote": "wrangler dev",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint --cache .",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "hono": "2.7.5"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.4.0",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0",
-    "eslint": "^8.12.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.2",
-    "ts-loader": "^9.2.8",
-    "typescript": "^4.6.3",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "@cloudflare/workers-types": "4.20221111.1",
+    "@typescript-eslint/eslint-plugin": "5.49.0",
+    "@typescript-eslint/parser": "5.49.0",
+    "@vitest/coverage-c8": "0.28.1",
+    "esbuild": "0.17.4",
+    "eslint": "8.32.0",
+    "eslint-config-prettier": "8.6.0",
+    "miniflare": "2.11.0",
+    "prettier": "2.8.3",
+    "typescript": "4.9.4",
+    "vitest": "0.28.1",
+    "vitest-environment-miniflare": "2.11.0",
+    "wrangler": "2.8.1"
   }
 }

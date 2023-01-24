@@ -1,20 +1,26 @@
 # Read about how to use this configuration file
-# https://developers.cloudflare.com/workers/cli-wrangler/configuration
+# https://developers.cloudflare.com/workers/wrangler/configuration
 
 name = "worker-typescript-template"
-type = "javascript"
+main = "dist/index.mjs"
 account_id = ""
-workers_dev = true
+compatibility_date = "2022-09-10"
+compatibility_flags = []
+
+[triggers]
+  crons = ["0 * * * *"]
 
 [vars]
-EXAMPLE_ENVIRONMENT_VARIABLE = "Hello, World!"
+  EXAMPLE_ENVIRONMENT_VARIABLE = "Hello, World!"
 
 [[kv_namespaces]]
-binding = ""
-preview_id = ""
-id = ""
+  binding = "<NAMESPACE_NAME>"
+  id = "<NAMESPACE_ID>"
+  preview_id = "<NAMESPACE_PREVIEW_ID>"
 
 [build]
-command = "npm run webpack"
-[build.upload]
-format = "service-worker"
+  command = "pnpm run build"
+
+[miniflare]
+  kv_persist = true
+  cache_persist = true
