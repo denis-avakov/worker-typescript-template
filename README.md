@@ -6,7 +6,7 @@
 
 ## Usage
 
-This is a minimal starter for building a new Cloudflare Workers project that uses TypeScript, Hono, Miniflare, esbuild and Vitest.
+This is a minimal starter for building a new Cloudflare Workers project that uses TypeScript, Hono, Miniflare, esbuild and Vitest ヾ(๑╹◡╹)ﾉ"
 
 ```shell
 # Install dependencies
