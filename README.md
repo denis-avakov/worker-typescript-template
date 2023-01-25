@@ -1,6 +1,6 @@
 # `worker-typescript-template` 🦕
 
-This is a minimal starter for building a new Cloudflare Workers project that uses TypeScript, Hono, Miniflare, esbuild and Vitest ヾ(๑╹◡╹)ﾉ"
+This is a minimal starter for building a new Cloudflare Workers project that uses TypeScript, Hono, Miniflare, esbuild and Vitest. Use this starter to build your new best thing ヾ(๑╹◡╹)ﾉ"
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/3fa5244eb03be0aa2681/maintainability)](https://codeclimate.com/github/denis-avakov/worker-typescript-template/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/3fa5244eb03be0aa2681/test_coverage)](https://codeclimate.com/github/denis-avakov/worker-typescript-template/test_coverage) [![Test](https://github.com/denis-avakov/worker-typescript-template/actions/workflows/test.yml/badge.svg)](https://github.com/denis-avakov/worker-typescript-template/actions/workflows/test.yml)
 
