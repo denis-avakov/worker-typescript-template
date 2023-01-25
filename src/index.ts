@@ -10,8 +10,8 @@
  *
  * Learn more at:
  * - https://developers.cloudflare.com/workers
- * - https://honojs.dev
  * - https://miniflare.dev
+ * - https://honojs.dev
  */
 
 import { Hono } from 'hono';

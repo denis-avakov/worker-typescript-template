@@ -13,7 +13,15 @@ This is a minimal starter for building a new Cloudflare Workers project that use
 3. Open a browser at `http://127.0.0.1:8787/` to see your worker in action
 4. Make HTTP requests to `/cdn-cgi/mf/scheduled` to trigger scheduled events
 
-```shell
+## Lern more
+
+- https://developers.cloudflare.com/workers
+- https://miniflare.dev
+- https://honojs.dev
+
+## CLI
+
+```cli
 # Install dependencies
 $ pnpm install
 
