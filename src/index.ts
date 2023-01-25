@@ -5,7 +5,7 @@
  *
  * - Rename the `wrangler.example.toml` to `wrangler.toml` and populate the variables
  * - Run `pnpm run dev` in your terminal to start a development server
- * - Open a browser at http://127.0.0.1:8787/ to see your worker in action
+ * - Open a browser at `http://127.0.0.1:8787/` to see your worker in action
  * - Make HTTP requests to `/cdn-cgi/mf/scheduled` to trigger scheduled events
  *
  * Learn more at:
@@ -15,14 +15,9 @@
  */
 
 import { Hono } from 'hono';
-import { logger } from 'hono/logger';
-import { prettyJSON } from 'hono/pretty-json';
 import { createError } from '~/utils';
 
 const app = new Hono<{ Bindings: Bindings }>();
-
-app.use('*', logger());
-app.use('*', prettyJSON());
 
 app.get('/', async (context) => {
   console.log('env', context.env.EXAMPLE_ENVIRONMENT_VARIABLE);
