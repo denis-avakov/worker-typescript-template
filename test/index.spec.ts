@@ -1,5 +1,5 @@
 import { expect, test, describe } from 'vitest';
-import API from '../src';
+import worker from '../src';
 
 declare global {
   function getMiniflareBindings(): Bindings;
@@ -8,9 +8,9 @@ declare global {
 const env = getMiniflareBindings();
 
 describe.concurrent('worker fetch events', () => {
-  function fetchWorker(target: string) {
-    return API.fetch(new Request(target), env);
-  }
+  const fetchWorker = (target: string) => {
+    return worker.fetch(new Request(target), env);
+  };
 
   test('GET / is ok', async () => {
     const response = await fetchWorker('http://127.0.0.1:8787/');
@@ -29,7 +29,7 @@ describe.concurrent('worker fetch events', () => {
 
 describe.concurrent('worker scheduled events', () => {
   test('responds on scheduled event', async () => {
-    const response = await API.scheduled();
+    const response = await worker.scheduled();
     expect(response).toBeUndefined();
   });
 });
