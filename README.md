@@ -15,9 +15,9 @@ This is a minimal starter for building a new Cloudflare Workers project that use
 
 ## Lern more
 
-- https://developers.cloudflare.com/workers
-- https://miniflare.dev
-- https://honojs.dev
+- [Cloudflare Workers](https://developers.cloudflare.com/workers)
+- [Miniflare](https://miniflare.dev)
+- [Hono](https://honojs.dev)
 
 ## CLI
 
