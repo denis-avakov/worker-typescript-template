@@ -21,7 +21,7 @@ const app = new Hono<{ Bindings: Bindings }>();
 
 app.get('/', async (context) => {
   console.log('env', context.env.EXAMPLE_ENVIRONMENT_VARIABLE);
-  console.log('kv', await context.env?.EXAMPLE_KV_NAMESPACE?.get('key'));
+  console.log('kv', await context.env.EXAMPLE_KV_NAMESPACE.get('key'));
 
   return context.text('Hono!!');
 });

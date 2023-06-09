@@ -23,7 +23,10 @@ describe.concurrent('worker fetch events', () => {
     const response = await fetchWorker('http://127.0.0.1:8787/404');
 
     expect(response.status).toBe(404);
-    expect(await response.json()).toEqual({ status: 404, statusText: 'Not Found' });
+    expect(await response.json()).toEqual({
+      status: 404,
+      statusText: 'Massive error has occurred 🤯🔌'
+    });
   });
 });
 
